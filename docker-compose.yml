@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    container_name: rocky-php73-app3
+    environment:
+      - CONTAINER_MODE=nginx
+#      - CONTAINER_MODE=apache
+#      - CONTAINER_MODE=php-fpm
+      - TZ=Asia/Taipei  # 在此更改時區
+#    ports:
+#      - "8087:80"
+    networks:
+      network_pd:
+        ipv4_address: 192.168.50.123
+#    volumes:
+      # 將網頁程式碼掛載進去
+#      - ./html:/var/www/html
+networks:
+  network_pd:
+    external: true
+
