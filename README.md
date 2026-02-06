@@ -132,7 +132,23 @@ docker exec <容器名稱或ID> nginx -t
 # php-fpm 設定
 
 設定目錄: /etc/php-fpm.d
+
 設定目錄: /etc/php-fpm.d/www.conf
+
+
+!!! 單一網站掛載
+```
+volumes:
+    - ./php-fpm_www.conf:/etc/php-fpm.d/www.conf:ro
+```
+
+!!! 整個目錄掛載
+
+```
+volumes:
+    - ./php-fpm_site:/etc/php-fpm.d:ro
+```
+
 
 !!! 修改設定檔, 不需重啟 container
 
