@@ -78,14 +78,14 @@ case "$MODE" in
         exec nginx -g "daemon off;"
         ;;
 
-#    "php-fpm")
-#        echo "[INFO] Mode: PHP-FPM"
-#        php-fpm -t
-#        exec php-fpm -F
-#        ;;
+    "php-fpm")
+        echo "[INFO] Mode: PHP-FPM"
+        php-fpm -t
+        exec php-fpm -F
+        ;;
      *)
         echo "[ERROR] Unknown mode: $MODE"
-        echo "Available modes: apache, nginx"
+        echo "Available modes: apache, nginx, php-fpm"
         exit 1
         ;;
 esac
