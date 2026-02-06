@@ -131,6 +131,8 @@ docker exec <容器名稱或ID> nginx -t
 
 # php-fpm 設定
 
+!!! 使用 80 PORT 進行連線
+
 設定目錄: /etc/php-fpm.d
 
 設定目錄: /etc/php-fpm.d/www.conf
